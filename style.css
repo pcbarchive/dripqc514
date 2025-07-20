@@ -1,0 +1,142 @@
+:root {
+    --background: #ffffff;
+    --text: #000;
+    --nav: #ffffff;
+    --hover: #fff0e0;
+}
+
+@font-face {
+    font-family: PT;
+    src: url("./PT.ttf");
+}
+
+@font-face {
+    font-family: Ovane;
+    src: url("./Ovane.otf");
+}
+
+* {
+    font-family: PT;
+}
+
+html,
+body {
+    margin: 0;
+    padding: 0;
+    background-color: var(--background);
+}
+
+nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    background-color: var(--nav);
+}
+
+subNav {
+    display: flex;
+}
+
+subNav div {
+    display: flex;
+    flex-direction: row;
+    height: 32px;
+    color: var(--text);
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: linear .1s;
+    text-align: center;
+    font-size: 16px;
+    padding: 16px;
+}
+
+nav div:hover {
+    background-color: var(--hover);
+}
+
+#title {
+    display: flex;
+    flex-direction: row;
+    font-size: 24px;
+    font-style: italic;
+    font-family: Ovane;
+    gap: 8px;
+    padding: 16px 32px 16px 16px;
+}
+
+#title img {
+    width: 36px;
+}
+
+#bannerText {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    height: 384px;
+    background-color: #00000080;
+}
+
+#bannerText div {
+    color: #fff;
+    font-size: 56px;
+    text-shadow: 0 0 4px #000, 0 0 4px #000, 0 0 4px #000, 0 0 4px #000;
+    width: 928px;
+    text-align: center;
+    font-weight: 500;
+    font-style: italic;
+}
+
+#bannerImage {
+    height: 384px;
+    background-image: url(https://images8.alphacoders.com/820/820962.jpg);
+    background-position: top;
+    background-repeat: no-repeat;
+    background-size: cover;
+    filter: saturate(.75);
+}
+
+#brands {
+    padding: 16px;
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+    font-size: 32px;
+}
+
+#brandIcons {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 8px;
+}
+
+.brandIcon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 32px;
+    border: solid 1px var(--text);
+    height: 320px;
+    flex: 1 1 calc((100% / 6) - (5 * 8px / 6));
+    min-width: calc((100% / 6) - (5 * 8px / 6));
+    box-sizing: border-box;
+    transition: ease-in .2s;
+    cursor: pointer;
+    box-shadow: 0 0 0 #000;
+    font-size: 24px;
+    font-family: Ovane;
+}
+
+.brandIcon:hover {
+    transform: translate(0, -4px);
+    box-shadow: 0 4px 0 #000;
+    background-color: var(--hover);
+}
+
+.brandIcon img {
+    height: 50%;
+}
